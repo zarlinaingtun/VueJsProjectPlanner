@@ -1,6 +1,6 @@
 <template>
 
-     <div class="project" >
+     <div class="project" :class="{complete:project.complete}" >
         <div class="flexing">
             <div @click="showDetail=!showDetail"><h3>{{project.title}}</h3></div>
             <div>
@@ -10,6 +10,7 @@
              </div>
         </div>
         <p v-if="showDetail">{{project.detail}}</p>
+        <p>{{project.complete}}</p>
      </div>
 </template>
 
@@ -61,5 +62,8 @@ span{
 }
 span:hover{
     color:#777;
+}
+.complete{
+  border-left-color: green;
 }
 </style>
