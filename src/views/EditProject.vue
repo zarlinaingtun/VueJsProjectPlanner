@@ -1,10 +1,10 @@
 <template>
 <h1>Edit Project</h1>
-  <form @submit.prevent="addProject">
+  <form @submit.prevent="updateProject">
       <label>Project Title</label>
-      <input type="text" v-model="title"/>
+      <input type="text" v-model="title" required/>
       <label>Project Detail</label>
-      <input type="text" v-model="detail"/>
+      <input type="text" v-model="detail" required/>
       <button>Add project</button>
   </form>
 </template>
@@ -30,6 +30,25 @@ export default {
         .catch((err)=>{
             console.log(err.message);
         })
+    },
+    methods:{
+        updateProject(){
+            console.log('update');
+            fetch('http://localhost:3000/projects/'+this.id,{
+                method:"PATCH",
+                headers:{"Content-type":"application/json"},
+                body:JSON.stringify({
+                    title:this.title,
+                    detail:this.detail
+                })
+            }).
+            then(()=>{
+                return this.$router.push({name:'Home'})
+            }).
+            catch((err)=>{
+                console.log(err);
+            })
+        }
     }
 }
 </script>

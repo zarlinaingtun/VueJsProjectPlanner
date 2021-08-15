@@ -2,13 +2,13 @@
   "projects": [
     {
       "id": 1,
-      "title": "Project title 1",
-      "detail": "project detail 1",
+      "title": "project title 1 updater",
+      "detail": "project detail 1 update",
       "complete": true
     },
     {
       "id": 3,
-      "title": "Project title 3",
+      "title": "Project title three",
       "detail": "project detail 3",
       "complete": true
     },

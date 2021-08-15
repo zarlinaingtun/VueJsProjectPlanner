@@ -2,9 +2,9 @@
   <h3>Add Project</h3>
   <form @submit.prevent="addProject">
       <label>Project Title</label>
-      <input type="text" v-model="title"/>
+      <input type="text" v-model="title" required/>
       <label>Project Detail</label>
-      <input type="text" v-model="detail"/>
+      <input type="text" v-model="detail" required/>
       <button>Add project</button>
   </form>
 </template>
@@ -65,7 +65,9 @@ label{
        margin:10px 0px;
    }
 input[type="text"]{
+       color:springgreen;
        background-color: transparent;
+       font-size:16px;
        width:100%;
        padding:10px;
        border:0;
