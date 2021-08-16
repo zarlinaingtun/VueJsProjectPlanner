@@ -15,7 +15,7 @@
     {
       "title": "title 4",
       "detail": "detail 4",
-      "complete": false,
+      "complete": true,
       "id": 4
     },
     {
